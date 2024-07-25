@@ -10,7 +10,10 @@ _On a relevant note, remembering all the people who lost their lives fighting fo
 
 ## Prerequisites
 - Public IP with port 53 accessible.
-- `dnsmasq`/`BIND` properly configured
+- Install `dnsmasq`
+  ```
+  sudo apt install dnsmasq
+  ```
 
 ## Troubleshoot
 - If you find _port 53 is already in use error_, it's likely that `systemd-resolved` is running on that port. Use the following commands to find the process id and kill it. Then try starting `dnsmasq` again.
