@@ -1,4 +1,12 @@
-## Quickly host a local DNS server and populate with top 100 websites in Bangladesh cached in seconds. Websites list collected from [Semrush](https://www.semrush.com/trending-websites/bd/all).
+### Quickly set up a local DNS server and populate with top ~100 websites in Bangladesh cached in seconds. Website list collected from [Semrush](https://www.semrush.com/trending-websites/bd/all).
+You can add a cron job to run periodically and update any expired record. For example, execute `crontab -e` and insert the line below to run the script every 6 hours
+```
+0 */6 * * * <path-to-query.sh>
+```
+
+The goal of this project is to provide a decentralized DNS server in case of a nationwide DNS server shutdown as we have seen in recent times. With these locally hosted public DNS servers, it is expected that at least some important websites hosted inside the country can be accessed even if the ISPs shutdown their DNS servers. However, it is worth mentioning that this is an assumption made from previous experience and may not be true depending on the nature and the way future bans are implemented.
+
+_On a relevant note, remembering all the people who lost their lives fighting for the right of the people in 2024 quota movement in Bangladesh. May their soul find eternal peace and may the friends and family they left behind have the courage to live on through their darkest days and find justice._
 
 ## Prerequisites
 - Public IP with port 53 accessible.
